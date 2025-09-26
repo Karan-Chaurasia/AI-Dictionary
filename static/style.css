@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f0f2f5 0%, #e6e9f0 100%); /* Subtle gradient for depth */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Changed from height: 100vh to handle overflow better */
+    margin: 0;
+    padding: 20px; /* Add padding for mobile edges */
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow for modern look */
+    width: 90%; /* Responsive base width */
+    max-width: 400px; /* Cap at 400px on larger screens */
+    text-align: center;
+    transition: box-shadow 0.3s ease; /* Subtle lift on interaction */
+}
+
+.container:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Interactive shadow on hover */
+}
+
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Ensures padding doesn't add to width */
+    font-size: 16px; /* Prevents zoom on iOS mobile */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth focus/hover */
+}
+
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Accessible focus ring */
+}
+
+button {
+    background: #007BFF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none; /* Remove default border for cleaner look */
+}
+
+button:hover {
+    background: #0056b3; /* Darker blue on hover */
+    transform: translateY(-1px); /* Subtle lift effect */
+}
+
+button:active {
+    transform: translateY(0); /* Press down on click */
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 16px;
+    padding: 15px; /* Add padding for readability */
+    background: #f8f9fa; /* Light background */
+    border-radius: 8px;
+    border-left: 4px solid #007BFF; /* Accent border */
+    line-height: 1.5; /* Better spacing for text */
+}
+
+/* Optional: For error states */
+.result.error {
+    background: #f8d7da;
+    border-left-color: #dc3545;
+    color: #721c24;
+}
+
+/* For formula rendering (if integrating math) */
+.formula-render {
+    font-size: 24px;
+    text-align: center;
+    margin: 15px 0;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Loading indicator (if adding JS) */
+.loading {
+    display: none;
+    color: #007BFF;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+    
+    input, button {
+        margin: 6px 0; /* Tighter spacing on mobile */
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 400px; /* Fixed width on desktop */
+    }
+    
+    /* If you want input and button side-by-side on larger screens */
+    button {
+        width: auto;
+        margin-left: 10px;
+        min-width: 100px;
+    }
+}
