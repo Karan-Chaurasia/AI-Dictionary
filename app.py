@@ -160,11 +160,7 @@ HTML_TEMPLATE = """
 </head>
 <body>
     <div class="container">
-<<<<<<< HEAD
         <h1>AI Dictionary 📚</h1>
-=======
-        <h1>AI Dictionary📚</h1>
->>>>>>> 514f88597eb3113f7d3c175a994aa26f9adfc413
         <form id="searchForm" class="search-form" method="POST" action="/">
             <input type="text" id="searchInput" name="word" placeholder="Enter a word, recipe, or formula (e.g., x^2 + y^2 = z^2)..." required>
             <div id="suggestions" class="suggestions"></div>
