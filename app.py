@@ -524,9 +524,8 @@ def home_post():
                                     error=error)
 
 # --------- Run App ---------
+import os
+
 if __name__ == "__main__":
-    print("Starting AI Quick Context Finder...")
-    print("Install dependencies: pip install flask requests pyspellchecker")
-    print("Replace SPOONACULAR_API_KEY with a real key for recipes.")
-    print("Open http://127.0.0.1:5000 in your browser.")
-    app.run(debug=True, host='127.0.0.1', port=5000)
+    port = int(os.environ.get("PORT", 5000))  # Render provides PORT
+    app.run(host="0.0.0.0", port=port, debug=True)
