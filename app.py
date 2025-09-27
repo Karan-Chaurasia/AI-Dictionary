@@ -160,7 +160,7 @@ HTML_TEMPLATE = """
 </head>
 <body>
     <div class="container">
-        <h1>AI Quick Context Finder 📚</h1>
+        <h1>AI Dictionary📚</h1>
         <form id="searchForm" class="search-form" method="POST" action="/">
             <input type="text" id="searchInput" name="word" placeholder="Enter a word, recipe, or formula (e.g., x^2 + y^2 = z^2)..." required>
             <div id="suggestions" class="suggestions"></div>
